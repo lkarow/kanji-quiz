@@ -1,0 +1,85 @@
+:root {
+  --primary-color: rgb(51, 0, 102);
+  --primary-color-var: rgba(51, 0, 102, 0.9);
+}
+
+* {
+  color: var(--primary-color);
+  font-family: Raleway, sans-serif;
+}
+
+.hidden {
+  display: none;
+}
+
+#question-container {
+  color: var(--primary-color);
+}
+
+.japanese-writing {
+  font-family: 'Sawarabi Mincho';
+}
+
+#start {
+  position: relative;
+}
+
+#start-btn-txt {
+  color: #fff;
+}
+
+.spinner-border {
+  content: '';
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  margin: auto;
+}
+
+.btn-primary {
+  --bs-btn-color: #fff;
+  --bs-btn-bg: var(--primary-color);
+  --bs-btn-border-color: rgb(103, 31, 174);
+  --bs-btn-border-radius: 0.5rem;
+  --bs-btn-hover-color: #fff;
+  --bs-btn-hover-bg: rgb(103, 31, 174);
+  --bs-btn-hover-border-color: var(--primary-color);
+  --bs-btn-focus-shadow-rgb: rgb(103, 31, 174);
+  --bs-btn-active-color: #fff;
+  --bs-btn-active-bg: var(--primary-color);
+  --bs-btn-active-border-color: rgb(103, 31, 174);
+}
+
+.btn-outline-primary {
+  border: 1px solid var(--primary-color);
+  color: var(--primary-color);
+}
+
+.btn-outline-primary:hover {
+  background-color: var(--primary-color);
+  border: 1px solid var(--primary-color);
+}
+
+.navbar {
+  background-color: var(--primary-color);
+}
+
+#footer {
+  background-color: var(--primary-color);
+  color: #fff;
+}
+
+#footer a {
+  color: #ffedae;
+}
+
+#kanji-info-modal {
+  color: var(--primary-color);
+}
+
+.modal-header {
+  background-color: var(--primary-color);
+  color: #fff;
+}

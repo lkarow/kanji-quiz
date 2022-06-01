@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@400;700&family=Sawarabi+Mincho&display=swap" rel="stylesheet">
+  <!-- Bootstrap CSS only -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+  <!-- Bootstrap JavaScript Bundle with Popper -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="icon" type="image/png" href="/img/favicon-256x256.png" sizes="256x256">
+  <script defer src="/js/scripts.js"></script>
+  <title>Kanji Quiz</title>
+</head>
+<body class="bg-light">
+  <!-- navbar section -->
+  <nav class="navbar">
+    <div class="container-fluid d-flex flex-row">
+      <a class="navbar-brand" href="#">
+        <img src="/img/daruman.png" alt="" width="90" height="90" class="align-middle">
+        <h1 class="d-inline display-5 align-middle text-white">Kanji Quiz</h1>
+      </a>
+    </div>
+  </nav>
+<main>
+  <!-- quiz section -->
+  <div id="container" class="container mt-5 text-center">
+    <!-- start game section -->
+    <div id="start-container" class="container text-start">
+      <div class="row d-flex justify-content-center">
+        <div class="col text-center">
+          <h5 class="fw-bold">Select kanji level:</h5>
+        </div>
+      </div>
+      <div class="row d-flex justify-content-center form-check form-switch">
+        <div class="col-5 col-sm-5 col-md-3 col-lg-3 col-xl-2">
+          <input class="form-check-input ms-auto" type="checkbox" role="switch" id="first-grade">
+          <label class="form-check-label" for="first-grade">First grade</label>
+        </div>
+      </div>
+      <div class="row d-flex justify-content-center form-check form-switch">
+        <div class="col-5 col-sm-5 col-md-3 col-lg-3 col-xl-2">
+        <input class="form-check-input ms-auto" type="checkbox" role="switch" id="second-grade">
+        <label class="form-check-label" for="second-grade">Second grade</label>
+      </div>
+      </div>
+      <div class="row d-flex justify-content-center form-check form-switch">
+        <div class="col-5 col-sm-5 col-md-3 col-lg-3 col-xl-2">
+        <input class="form-check-input ms-auto" type="checkbox" role="switch" id="third-grade">
+        <label class="form-check-label" for="third-grade">Third grade</label>
+      </div>
+      </div>
+      <div class="row d-flex justify-content-center form-check form-switch">
+        <div class="col-5 col-sm-5 col-md-3 col-lg-3 col-xl-2">
+        <input class="form-check-input ms-auto" type="checkbox" role="switch" id="fourth-grade">
+        <label class="form-check-label" for="fourth-grade">Fourth grade</label>
+      </div>
+      </div>
+      <div class="row d-flex justify-content-center form-check form-switch">
+        <div class="col-5 col-sm-5 col-md-3 col-lg-3 col-xl-2">
+        <input class="form-check-input ms-auto" type="checkbox" role="switch" id="fifth-grade">
+        <label class="form-check-label" for="fifth-grade">Fifth grade</label>
+      </div>
+      </div>
+      <div class="row d-flex justify-content-center form-check form-switch">
+        <div class="col-5 col-sm-5 col-md-3 col-lg-3 col-xl-2">
+        <input class="form-check-input ms-auto" type="checkbox" role="switch" id="sixth-grade">
+        <label class="form-check-label" for="sixth-grade">Sixth grade</label>
+      </div>
+      </div>
+      <div class="mt-4 row">
+        <div class="col text-center">
+          <button id="start" class="control-btn btn-loading btn btn-success btn-lg" disabled>
+            <span id="start-btn-txt">Start game</span>
+            <div id="spinner" class="spinner-border text-light invisible" role="status">
+          </button>
+      </div>
+      </div>
+    </div>
+    <!-- question & answer section -->
+    <div id="question-container" class="hidden display-1 fw-bold japanese-writing">Question</div>
+    <div id="answer-container" class="hidden mt-4">
+      <button id="answer-one" class="answer-btn btn btn-outline-primary">Answer</button>
+      <button id="answer-two" class="answer-btn btn btn-outline-primary">Answer</button>
+      <button id="answer-three" class="answer-btn btn btn-outline-primary">Answer</button>
+      <button id="answer-four" class="answer-btn btn btn-outline-primary">Answer</button>
+    </div>
+    <!-- control section -->
+    <div id="controls" class="mt-4">
+      <button id="next" class="control-btn hidden btn btn-primary">Next kanji</button>
+      <br>
+      <button id="kanji-info" class="control-btn hidden mt-4 btn btn-secondary" data-bs-toggle="modal" data-bs-target="#kanji-info-modal" disabled>Info about kanji</button>
+      <br>
+      <button id="exit" class="control-btn hidden mt-4 btn btn-outline-danger">Exit</button>
+    </div>
+    <!-- modal for kanji info -->
+    <div class="modal fade" id="kanji-info-modal" tabindex="-1" aria-labelledby="kanji-info-modal" aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h3 class="modal-title japanese-writing" id="kanji-info-modal-title"></h3>
+            <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body text-start">
+            <div class="row">
+              <div class="col-md-4">Meanings: </div>
+              <div class="col-md-8"><span id="modal-meanings"></span></div>
+            </div>
+            <hr>
+            <div class="row">
+              <div class="col-md-4">Kun-readings: </div>
+              <div class="col-md-8 japanese-writing"><span id="modal-kun-reading"></span></div>
+            </div>
+            <hr>
+            <div class="row">
+              <div class="col-md-4">On-readings: </div>
+              <div class="col-md-8 japanese-writing"><span id="modal-on-reading"></span></div>
+            </div>
+            <hr>
+            <div class="row">
+              <div class="col-md-4">Strokes: </div>
+              <div class="col-md-8"><span id="modal-strokes"></span></div>
+            </div>
+            <hr>
+            <div class="row">
+              <div class="col-md-4">JLPT: </div>
+              <div class="col-md-8"><span id="modal-jlpt"></span></div>
+            </div>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- counter section -->
+    <div id="counter" class="hidden mt-5">
+      <p>Right answers: <span id="right-answers"></span></p>
+      <p>Wrong answers: <span id="wrong-answers"></span></p>
+    </div>
+  </div>
+</main>
+  <!-- footer -->
+  <footer id="footer" class="fixed-bottom">
+    <div class="mt-2 container-fluid text-center">
+      <p class="text-white">Special thanks to <a href="https://kanjiapi.dev/" target="_blank">kanjiapi.dev</a></p>
+    </div>
+  </footer>
+</body>
+</html>
