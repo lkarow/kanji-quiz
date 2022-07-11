@@ -35,39 +35,39 @@
           <h5 class="fw-bold">Select kanji level:</h5>
         </div>
       </div>
-      <div class="row d-flex justify-content-center form-check form-switch">
+      <div class="row d-flex justify-content-center form-check">
         <div class="col-5 col-sm-5 col-md-3 col-lg-3 col-xl-2">
-          <input class="form-check-input ms-auto" type="checkbox" role="switch" id="first-grade">
+          <input class="form-check-input ms-auto" type="radio" name="flexRadioDefault" id="first-grade">
           <label class="form-check-label" for="first-grade">First grade</label>
         </div>
       </div>
-      <div class="row d-flex justify-content-center form-check form-switch">
+      <div class="row d-flex justify-content-center form-check">
         <div class="col-5 col-sm-5 col-md-3 col-lg-3 col-xl-2">
-        <input class="form-check-input ms-auto" type="checkbox" role="switch" id="second-grade">
+        <input class="form-check-input ms-auto" type="radio" name="flexRadioDefault" id="second-grade">
         <label class="form-check-label" for="second-grade">Second grade</label>
       </div>
       </div>
-      <div class="row d-flex justify-content-center form-check form-switch">
+      <div class="row d-flex justify-content-center form-check">
         <div class="col-5 col-sm-5 col-md-3 col-lg-3 col-xl-2">
-        <input class="form-check-input ms-auto" type="checkbox" role="switch" id="third-grade">
+        <input class="form-check-input ms-auto" type="radio" name="flexRadioDefault" id="third-grade">
         <label class="form-check-label" for="third-grade">Third grade</label>
       </div>
       </div>
-      <div class="row d-flex justify-content-center form-check form-switch">
+      <div class="row d-flex justify-content-center form-check">
         <div class="col-5 col-sm-5 col-md-3 col-lg-3 col-xl-2">
-        <input class="form-check-input ms-auto" type="checkbox" role="switch" id="fourth-grade">
+        <input class="form-check-input ms-auto" type="radio" name="flexRadioDefault" id="fourth-grade">
         <label class="form-check-label" for="fourth-grade">Fourth grade</label>
       </div>
       </div>
-      <div class="row d-flex justify-content-center form-check form-switch">
+      <div class="row d-flex justify-content-center form-check">
         <div class="col-5 col-sm-5 col-md-3 col-lg-3 col-xl-2">
-        <input class="form-check-input ms-auto" type="checkbox" role="switch" id="fifth-grade">
+        <input class="form-check-input ms-auto" type="radio" name="flexRadioDefault" id="fifth-grade">
         <label class="form-check-label" for="fifth-grade">Fifth grade</label>
       </div>
       </div>
-      <div class="row d-flex justify-content-center form-check form-switch">
+      <div class="row d-flex justify-content-center form-check">
         <div class="col-5 col-sm-5 col-md-3 col-lg-3 col-xl-2">
-        <input class="form-check-input ms-auto" type="checkbox" role="switch" id="sixth-grade">
+        <input class="form-check-input ms-auto" type="radio" name="flexRadioDefault" id="sixth-grade">
         <label class="form-check-label" for="sixth-grade">Sixth grade</label>
       </div>
       </div>
@@ -75,7 +75,7 @@
         <div class="col text-center">
           <button id="start" class="control-btn btn-loading btn btn-success btn-lg" disabled>
             <span id="start-btn-txt">Start game</span>
-            <div id="spinner" class="spinner-border text-light invisible" role="status">
+            <span id="spinner" class="spinner-border text-light invisible" role="status"></span>
           </button>
       </div>
       </div>
@@ -101,7 +101,7 @@
       <div class="modal-dialog">
         <div class="modal-content">
           <div class="modal-header">
-            <h3 class="modal-title japanese-writing" id="kanji-info-modal-title"></h3>
+            <h3 class="modal-title japanese-writing" id="kanji-info-modal-title">Info</h3>
             <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
           </div>
           <div class="modal-body text-start">
