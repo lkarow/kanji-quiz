@@ -227,7 +227,7 @@ async function start() {
   startBtnTxt.classList.add('invisible');
   await fetchKanji();
   await showWrongAnswers();
-  showQuestion();
+  await showQuestion();
   questionContainer.classList.remove('hidden');
   answerContainer.classList.remove('hidden');
   nextButton.classList.remove('hidden');
@@ -259,7 +259,7 @@ nextButton.addEventListener('click', async (e) => {
   e.preventDefault();
   cleanAnswerButtons();
   await showWrongAnswers();
-  showQuestion();
+  await showQuestion();
   kanjiInfoButton.disabled = true;
 });
 
