@@ -98,14 +98,18 @@ async function randomMeaning() {
 
 // attach wrong answers to DOM
 async function showWrongAnswers() {
-  answerOne.innerText = await randomMeaning();
+  const answerOneMeaning = await randomMeaning();
   await sleep(50);
-  answerTwo.innerText = await randomMeaning();
+  const answerTwoMeaning = await randomMeaning();
   await sleep(50);
-  answerThree.innerText = await randomMeaning();
+  const answerThreeMeaning = await randomMeaning();
   await sleep(50);
-  answerFour.innerText = await randomMeaning();
-  await sleep(50);
+  const answerVourMeaning = await randomMeaning();
+
+  answerOne.innerText = answerOneMeaning;
+  answerTwo.innerText = answerTwoMeaning;
+  answerThree.innerText = answerThreeMeaning;
+  answerFour.innerText = answerVourMeaning;
 }
 
 let rightKanji;
